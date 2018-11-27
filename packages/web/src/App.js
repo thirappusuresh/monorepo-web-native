@@ -1,23 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-import SharedSecret from "shared";
+import { SECRET_SHARED_CODE, withData } from "shared";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          {SharedSecret}
+const App = ({ apiState, data, refetchData }) => {
+  return (
+    <div className="App">
+      <h1>Data fetching example: {SECRET_SHARED_CODE}</h1>
+      {apiState.isIdle() && <p>This will never be idle</p>}
+      {apiState.isPending() && (
+        <p>
+          Please wait, <strong>fetching data</strong>!
         </p>
-      </div>
-    );
-  }
-}
+      )}
+      {apiState.isSuccess() &&
+        data.map(user => (
+          <p key={user.name}>
+            {user.name} works at {user.company.name}
+          </p>
+        ))}
+      {apiState.isError() && (
+        <p>
+          Argh, encountered an <strong>error</strong>
+        </p>
+      )}
+      {<button onClick={refetchData}>Click to refetch</button>}
+    </div>
+  );
+};
 
-export default App;
+export default withData(App);
