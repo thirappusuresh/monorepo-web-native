@@ -1,0 +1,97 @@
+.footer{
+    background: #134f70;
+    padding: 50px 32px 12px;
+    color: #fff;
+}
+.footer--search{
+    border-radius: 2px;
+    border: solid 1px #cccccc;
+    background-color: #fafafa;
+    font-size: 12px;
+    height: 36px;
+    line-height: 36px;
+    color: #666666;
+    padding: 0 7px;
+}
+.footer--search-button{
+    max-width: 120px;
+    margin-left: -2px;
+}
+.footer--contact-us-heading{
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    max-width: 133px;
+}
+.footer--whatsapp-number{
+    line-height: 21px;
+    font-size: 18px;
+    color: #cccccc;
+}
+.footer--social-links{
+    width: 24px;
+    margin-right: 20px;
+    img{
+        max-width: 100%;
+    }
+}
+.footer--app-play-store-images{
+    max-width: 100px;
+    &:first-child{
+        margin-right: 16px;
+    }
+}
+.footer--contact{
+    margin-bottom: 55px;
+}
+.footer--links{
+    padding-bottom: 44px;
+    margin-bottom: 56px;
+    border-bottom: 1px solid #ccc;
+}
+.footer--links-heading{
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.footer-links-wrapper{
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 40px;
+
+    a, .btn-link {
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+    }
+}
+
+.footer--links-partner-heading{
+    margin-top: 48px;
+}
+.copyright--section{
+    height: 80px;
+    line-height: 80px;
+    background-color: #eef2f7;
+    font-size: 14px;
+    text-align: center;
+    color: #666666;
+}
+@media (max-width: 991.98px){
+    .mobile-footer--container{
+        background-color: #eef2f7;
+        padding: 15px;
+    }
+    .selling-point-points{
+        width: 33%;
+    }
+    .selling-point--left{
+        width: 100%;
+        text-align: center;
+        p{
+            width: auto;
+            margin: 0;
+        }
+    }
+}

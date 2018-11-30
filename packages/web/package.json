@@ -1,17 +1,97 @@
 {
-  "name": "web",
-  "version": "0.1.0",
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-app-rewire-babel-loader": "^0.1.1",
-    "react-app-rewired": "^1.4.1",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
-  },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "name": "web",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.6",
+        "@fortawesome/free-brands-svg-icons": "^5.4.1",
+        "@fortawesome/free-regular-svg-icons": "^5.4.1",
+        "@fortawesome/free-solid-svg-icons": "^5.4.1",
+        "@fortawesome/react-fontawesome": "^0.1.3",
+        "@zeit/next-css": "^1.0.1",
+        "@zeit/next-sass": "^1.0.1",
+        "axios": "^0.18.0",
+        "axios-jsonp": "^1.0.2",
+        "babel-plugin-transform-define": "^1.3.0",
+        "bootstrap": "^4.1.3",
+        "classnames": "^2.2.6",
+        "cross-env": "^5.2.0",
+        "css-purify-webpack-loader": "^1.0.1",
+        "dotenv": "^6.0.0",
+        "enzyme": "^3.7.0",
+        "enzyme-adapter-react-16": "^1.6.0",
+        "express": "^4.16.3",
+        "file-loader": "^2.0.0",
+        "keymirror": "^0.1.1",
+        "next": "^7.0.0",
+        "next-compose-plugins": "^2.1.1",
+        "next-plugin-transpile-modules": "^0.1.3",
+        "next-workbox-webpack-plugin": "^1.1.0",
+        "node-sass": "^4.9.3",
+        "node-sass-chokidar": "^1.3.3",
+        "npm-run-all": "^4.1.3",
+        "pm2": "^3.1.3",
+        "prop-types": "^15.6.2",
+        "react": "^16.5.1",
+        "react-dom": "^16.5.1",
+        "react-redux": "^5.0.7",
+        "react-router": "^4.3.1",
+        "react-router-dom": "^4.3.1",
+        "react-slick": "^0.23.2",
+        "reactjs-popup": "^1.3.1",
+        "redux": "^4.0.0",
+        "redux-actions": "^2.6.1",
+        "rimraf": "^2.6.2",
+        "shared": "^2.0.0",
+        "slick-carousel": "^1.8.1",
+        "underscore": "^1.9.1",
+        "url-loader": "^1.1.1",
+        "webpack-bundle-analyzer": "^3.0.2",
+        "webpack-pwa-manifest": "^3.6.2"
+    },
+    "scripts": {
+        "watch": "npm-run-all -p preBuildSteps watch-css start-server",
+        "build-css": "node-sass-chokidar src/styles/ -o src/styles/build/",
+        "watch-css": "yarn build-css && node-sass-chokidar src/styles/ -o src/styles/build/ --watch --recursive",
+        "preBuildSteps": "node preBuildSteps.js",
+        "start-server": "node server/server.js",
+        "start": "npm-run-all -p preBuildSteps watch-css start-server",
+        "lint": "node_modules/eslint/bin/eslint.js pages/** src/ducks/** src/components/**",
+        "test-dev": "cross-env NODE_ENV=test jest --watch",
+        "test": "cross-env CI=true jest --env=jsdom",
+        "precommit": "yarn lint",
+        "prepush": "yarn test",
+        "delete_node_modules": "rimraf node_modules",
+        "prod_install": "yarn install --production",
+        "build": "next build",
+        "start-prod-in-dev-machine": "cross-env NODE_ENV=production node server/server.js",
+        "start-prod": "pm2 delete medlifewebapp;cross-env NODE_ENV=production pm2 start -i 0 server/server.js --name 'medlifewebapp'",
+        "production-build": "npm-run-all -s delete_node_modules preBuildSteps prod_install build"
+    },
+    "devDependencies": {
+        "axios-mock-adapter": "^1.15.0",
+        "babel-core": "7.0.0-bridge.0",
+        "babel-eslint": "^9.0.0",
+        "babel-jest": "^23.6.0",
+        "eslint": "^5.6.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jsx-a11y": "^6.1.1",
+        "eslint-plugin-react": "^7.11.1",
+        "husky": "^0.14.3",
+        "jest": "^23.6.0"
+    },
+    "eslintIgnore": [
+        "src/**/*.css"
+    ],
+    "jest": {
+        "verbose": true,
+        "testPathIgnorePatterns": [
+            "<rootDir>/.next/",
+            "<rootDir>/node_modules/"
+        ]
+    },
+    "engines": {
+        "node": ">=8.5"
+    }
 }

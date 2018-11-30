@@ -1,0 +1,37 @@
+.top-brands--heading{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+.top-brands--category-images{
+    max-width: 100%;
+}
+.top-brands--container{
+    padding: 30px;
+    margin-top: 30px;
+}
+.top-brands--container .slick-list{
+    margin: 0 50px;
+}
+.top-brands--container .slick-prev, .top-brands--container .slick-next{
+    margin-top: 0;
+}
+@media (max-width: 991.98px) {
+    .top-brands--container{
+        padding: 0 8px;
+        margin-top: 0;
+        .slick-slide{
+            padding: 0;
+        }
+    }
+    .top-brands--heading{
+        font-size: 16px;
+    }
+    .top-brands--category-heading{
+        width: 28vw;
+        padding: 0 20px 0 0;
+    }
+    .top-brands--container .slick-list{
+        margin: 0;
+    }
+}

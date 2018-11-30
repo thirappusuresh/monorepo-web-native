@@ -1,0 +1,44 @@
+.health-articles--container {
+  background: #eef2f7;
+  padding: 30px 0;
+  margin-top: 30px; }
+
+.health-articles--heading {
+  line-height: 25px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+  font-size: 24px; }
+
+.health-articles--categories {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  text-align: left;
+  letter-spacing: 0.5px; }
+
+.health-articles--items {
+  min-height: 276px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px; }
+
+.health-articles--items-image {
+  width: 100%; }
+
+.health-articles--items-heading {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: left;
+  line-height: 16px; }
+
+.health-articles--items-desc {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 18px;
+  max-width: 222px; }

@@ -1,0 +1,138 @@
+.shop-health-products--container{
+    padding: 30px;
+    margin-top: 30px;
+}
+.shop-health-products--heading{
+    line-height: 25px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+    font-size: 24px;
+}
+.shop-health-products--data-container h6{
+    color: #ff7300;
+    font-weight: bold;
+    text-align: center;
+}
+.shop-health-products--data-container p{
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+.shop-health-products--shop-by-category,.shop-health-products--shop-by-concern{
+    position: relative;
+    width: 100%;
+}
+.shop-health-products--category-images{
+    max-width: 100%;
+    border-radius: 100%;
+}
+.shop-health-products--image-container{
+    text-align: center;
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 100%;
+    background: #ececec;
+}
+.shop-health-products--concern-images{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin: -25px 0 0 -25px;
+}
+.shop-health-products--category-title{
+    text-align: center;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #134f70;
+    margin-top: 10px;
+}
+/* slick */
+.slick-slide {
+    padding: 0 23px;
+    cursor: pointer;
+}
+.slick-list {
+    margin: 0 -23px;
+}
+.slick-next, .slick-prev{
+    z-index: 10;
+    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    margin-top: -12px;
+    border-radius: 100%;
+    color: #999;
+    line-height: 42px;
+    font-size: 22px;
+}
+.slick-next svg, .slick-prev svg{
+    font-size: 20px;
+    height: 20px;;
+    color: #999;
+}
+.slick-next:before, .slick-prev:before{
+    content: '';
+}
+.slick-next:hover, .slick-prev:hover{
+    background: #fff;
+}
+.slick-prev{
+    left: -20px;
+    text-indent: -4px;
+}
+.slick-next{
+    right: -20px;
+    text-indent: 4px;
+}
+.slick-disabled{
+    opacity: 0.5;
+    cursor: default;
+}
+/* slick */
+.shop-health-products--categories{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 55px;
+    margin-bottom: 25px;
+}
+@media (min-width: 768px){
+    .shop-health-products--items>li.col-md-2 {
+        max-width: calc(16.66667% - 37.5px);
+    }
+}
+@media (max-width: 991.98px) {
+    .shop-health-products--container{
+        padding: 0 12px;
+    }
+    .shop-health-products--categories{
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+    .shop-health-products--concern-wrapper{
+        margin-top: 32px;
+    }
+    .shop-health-products--categories-wrapper,.shop-health-products--concern-wrapper{
+        padding: 0 8px;
+    }
+    .shop-health-products--category-title{
+        font-size: 12px;
+        color: #666;
+        font-weight: 400;
+    }
+    .shop-health-products--category-heading{
+        width: 26vw;
+    }
+    .shop-health-products--container .slick-slide{
+        padding: 0 8px;
+    }
+    .shop-health-products--container .slick-list {
+        margin: 0 -8px;
+    }
+}
+

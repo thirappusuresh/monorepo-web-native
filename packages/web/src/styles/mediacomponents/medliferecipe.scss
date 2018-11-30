@@ -1,0 +1,47 @@
+.medlife-recipe--container{
+    background: #eef2f7;
+    padding: 30px 0;
+}
+.medlife-recipe--heading{
+    color: #aaa;
+    font-size: 12px;
+    position: relative;
+    margin-bottom: 42px;
+}
+.medlife-recipe--arrow-down{
+    position: absolute;
+    left: 50%;
+    top:100%;
+    width: 15px;
+    margin-left: -5px;
+}
+.medlife-recipe--sub-heading-left{
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+}
+.medlife-recipe--steps{
+    margin-bottom: 50px;
+}
+.medlife-recipe--steps span{
+    font-size: 13px;
+    width: 25px;
+    height: 26px;
+    border: solid 1px #ff7300;
+    color: #ff7300;
+    text-align: center;
+    border-radius: 100%;
+    line-height: 25px;
+    font-weight: 600;
+    margin-right: 1rem;
+    margin-bottom: 9px;
+}
+.medlife-recipe--steps p,.medlife-recipe--steps~p{
+    font-size: 13px;
+}
+.medlife-recipe--video-player{
+    object-fit: fill;
+}

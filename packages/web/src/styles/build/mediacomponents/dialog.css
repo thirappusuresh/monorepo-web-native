@@ -1,0 +1,13 @@
+.dialog {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  transition: all 100ms ease-in-out 200ms; }
+
+.show-dialog {
+  opacity: 1;
+  pointer-events: inherit; }

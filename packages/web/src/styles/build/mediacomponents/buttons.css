@@ -1,0 +1,25 @@
+.button-transparent, .button-primary {
+  text-transform: uppercase;
+  width: 190px;
+  outline: 0;
+  box-shadow: none;
+  text-align: center;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 2px;
+  cursor: pointer; }
+
+.button-transparent {
+  background: transparent;
+  border: solid 1px #134f70;
+  color: #134f70; }
+
+.button-primary {
+  background: #ff7300;
+  border: 1px solid #ff7300;
+  color: #fff; }
+
+.button-whiten {
+  color: #fff;
+  border-color: #fff; }

@@ -1,0 +1,23 @@
+.partner-with-us--container {
+  padding: 30px 0; }
+
+.partner-with-us--heading {
+  line-height: 25px;
+  margin-bottom: 32px;
+  color: #333;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 25px; }
+
+.partner-with-us--sub-heading {
+  width: 434px;
+  line-height: 21px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 24px; }
+
+.partner-with-us--container h6 {
+  font-size: 12px;
+  text-align: center; }

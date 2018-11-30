@@ -1,0 +1,133 @@
+.book-lab-test--container {
+  background: #eef2f7;
+  padding: 30px 0;
+  margin-top: 30px; }
+
+.book-lab-test--heading {
+  line-height: 25px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+  font-size: 24px; }
+
+.book-lab-test--data-container {
+  color: #ff7300;
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  line-height: 40px; }
+
+.book-lab-test--data-representation-text {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: #666; }
+
+.book-lab-test--data-representation-icon {
+  width: 40px;
+  height: 40px;
+  border: solid 1px #ff7300;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 auto; }
+
+.book-lab-test--categories {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
+.book-lab-test--items {
+  min-height: 276px;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px; }
+
+.book-lab-test--items-details-wrapper {
+  padding: 12px; }
+
+.book-lab-test--items-image {
+  width: 100%; }
+
+.book-lab-test--items-heading {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: left;
+  color: #333333;
+  width: 130px;
+  line-height: 13px; }
+
+.book-lab-test--items-desc {
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  text-align: left;
+  line-height: 13px;
+  margin-bottom: 20px; }
+
+.book-lab-test--items-logo {
+  max-width: 90px; }
+
+.book-lab-test--prices-discount {
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 14px;
+  text-align: right; }
+
+.book-lab-test--discount-price {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  color: #333;
+  font-weight: 500; }
+
+.book-lab-test--mrp {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 12px;
+  margin-top: 10px; }
+
+.book-lab-test--discount-percent {
+  color: #53a835;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+  margin-top: 20px; }
+
+.book-lab-test--items button {
+  margin: 8px 12px 12px; }
+
+.book-lab-test--container .slick-slide {
+  padding: 0 12px; }
+
+.book-lab-test--container .slick-list {
+  margin: 0 -12px; }
+
+@media (max-width: 991.98px) {
+  .book-lab-test--container {
+    background: #fff;
+    padding: 0;
+    margin-top: 0; }
+  .book-lab-test--categories {
+    font-size: 16px;
+    padding: 0 8px; }
+  .book-lab-test--items {
+    width: 70vw;
+    height: 120px;
+    border-radius: 2px;
+    border: solid 1px #d7e3e9;
+    min-height: 0; }
+    .book-lab-test--items button {
+      width: 130px;
+      margin-right: 0; }
+  .book-lab-test--prices-discount {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end; }
+  .book-lab-test--price-and-disc {
+    display: flex;
+    align-items: center; }
+  .book-lab-test--discount-percent {
+    margin-top: 10px;
+    margin-left: 20px; } }

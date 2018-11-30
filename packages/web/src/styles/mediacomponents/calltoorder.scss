@@ -1,0 +1,31 @@
+@media (max-width: 991.98px) {
+    .call-to-order--content{
+        height: 73px;
+        border-radius: 2px;
+        border: solid 1px #d7e3e9;
+        background-color: #ffffff;
+        padding: 12px 16px 12px 14px;
+    }
+    .call-to-order--heading{
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333333;
+    }
+    .call-to-order--number{
+        line-height: 17px;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+    .call-to-order--phone-wrapper{
+        width: 50px;
+        height: 50px;
+        background-color: #eef2f7;
+        line-height: 50px;
+        border-radius: 100%;
+        text-align: center;
+    }
+    .call-to-order--call-icon{
+        width: 16px;
+    }
+}

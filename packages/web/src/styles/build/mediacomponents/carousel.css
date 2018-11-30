@@ -1,0 +1,86 @@
+.carousel--full-stretch-container {
+  height: 236px;
+  background-color: #44a6b6;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center; }
+
+.carousel--full-stretch-container > div {
+  width: 100%; }
+
+.carousel--medlide-banner-space-desc {
+  width: 190px;
+  height: 131px;
+  border: solid 2px #60b2bf;
+  padding: 20px 25px;
+  margin-right: 25px;
+  color: #fff; }
+
+.carousel--medlide-banner-space-desc > p {
+  margin-bottom: 0; }
+
+.carousel--desc-heading {
+  font-size: 16px;
+  font-weight: 800; }
+
+.carousel--desc-heading-primary {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 28px; }
+
+.carousel--desc-text {
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 3px; }
+
+.slick-disabled {
+  cursor: default; }
+
+.carousel--full-stretch-container .slick-prev, .carousel--full-stretch-container .slick-next {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 45px;
+  margin-top: 0px;
+  transition: all 100ms ease-out; }
+
+.carousel--full-stretch-container .slick-prev svg, .carousel--full-stretch-container .slick-next svg {
+  color: #fff; }
+
+.carousel--full-stretch-container .slick-prev:hover, .carousel--full-stretch-container .slick-next:hover {
+  background: rgba(0, 0, 0, 0.2); }
+
+.carousel--full-stretch-container .slick-next {
+  right: 25px; }
+
+.carousel--full-stretch-container .slick-prev {
+  left: 25px; }
+
+.carousel--full-stretch-container .slick-list {
+  margin: 0; }
+
+.carousel--full-stretch-container .slick-slide {
+  padding: 0; }
+
+.carousel--medlide-banner-space-desc-wrapper {
+  width: 260px; }
+
+@media (max-width: 991.98px) {
+  .carousel--banner-space {
+    max-width: 100%; }
+  .carousel--full-stretch-container > .container {
+    padding: 0; }
+    .carousel--full-stretch-container > .container .slick-slide img {
+      width: 100%; }
+  .carousel--full-stretch-container {
+    height: auto; }
+  .slick-next, .slick-prev {
+    display: none !important; } }

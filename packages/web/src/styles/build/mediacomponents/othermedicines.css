@@ -1,0 +1,27 @@
+.other-medicines--container {
+  padding: 30px 0; }
+
+.other-medicines--heading {
+  line-height: 25px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+  font-size: 24px; }
+
+.other-medicines--container h6 {
+  font-size: 12px;
+  text-align: center; }
+
+@media (max-width: 991.98px) {
+  .other-medicines--prescription {
+    list-style: none; }
+  .other-medicines--prescription-buttons-mobile {
+    width: calc(100% - 16px);
+    margin: 0 8px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 48px;
+    margin-bottom: 12px; }
+  .other-medicines--container {
+    padding-top: 0;
+    padding-bottom: 12px; } }
