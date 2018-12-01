@@ -2,3 +2,5 @@ node_modules
 .expo/*
 npm-debug.*
 yarn-error.log
+packages/web/.next/*
+packages/shared/src/index.js

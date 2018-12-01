@@ -2,12 +2,14 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Header from '../src/components/Header';
+import App from '../src/components/App';
 import '../src/styles/build/app.css'; // eslint-disable-line
 import NavbarContainer from '../src/components/NavbarContainer';
 import BodyWrapperContainer from '../src/components/BodyWrapperContainer';
 import Footer from '../src/components/Footer';
 import { setFeatures as setFeaturesActionCreator } from '../src/ducks/FeatureDucks';
 import { SECRET_SHARED_CODE } from 'shared';
+import "@babel/polyfill"; 
  
 class Home extends Component {
     componentDidMount() {
@@ -23,8 +25,8 @@ class Home extends Component {
         return (
             <Fragment>
                 <Header />
-                <div>testes: {SECRET_SHARED_CODE}</div>
                 <NavbarContainer />
+                <App />
                 <BodyWrapperContainer />
                 <Footer />
             </Fragment>

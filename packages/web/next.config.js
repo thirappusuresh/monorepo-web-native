@@ -7,11 +7,7 @@ const NextWorkboxPlugin = require("next-workbox-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const workboxOptions = require("./webpack_options/workboxOptions");
 const manifestOptions = require("./webpack_options/manifestOptions");
-const withPlugins = require("next-compose-plugins");
-const withTM = require("next-plugin-transpile-modules");
 // Update these to match your package scope name.
-const internalNodeModulesRegExp = /@panter(?!.*node_modules)/;
-const externalNodeModulesRegExp = /node_modules(?!\/@panter(?!.*node_modules))/;
 
 const cssConfig = withCSS({
   webpack(config, { isServer, buildId, dev }) {
@@ -84,11 +80,6 @@ const cssConfig = withCSS({
 
     return config;
   }
-},
-{ internalNodeModulesRegExp, externalNodeModulesRegExp });
+})
 
-const tmConfig = withTM({
-  transpileModules: ["shared"]
-});
-
-module.exports = cssConfig; //withPlugins([cssConfig, tmConfig], {});
+module.exports = cssConfig;
