@@ -6,37 +6,19 @@ const App = ({ apiState, data, refetchData, errors = {} }) => {
   const canRetry = apiState.isSuccess() || apiState.isError();
   return (
     <View style={styles.container}>
-      <Text style={styles.getStartedText}>Data fetching example: {SECRET_SHARED_CODE}</Text>
-      {apiState.isIdle() && <Text>This will never be idle</Text>}
-      {apiState.isPending() && (
-        <Text style={styles.codeHighlightText}>
-          Please wait, <Text>fetching data</Text>!
-        </Text>
-      )}
-      {apiState.isSuccess() &&
-        data.map(user => (
-          <Text key={user.name} style={styles.codeHighlightText}>
-            {user.name} works at{" "}
-            <Text style={styles.boldText}>{user.company.name}</Text>
-          </Text>
-        ))}
-      {apiState.isError() && (
-        <Text>
-          Argh, encountered an error!
-          {Object.values(errors)}
-        </Text>
-      )}
-      {<Button onPress={refetchData} title="Click to refetch" />}
+      <Text style={styles.getStartedText}>Monorepo Demo</Text>
+      <Text style={styles.getStartedText1}>This text is coming from shared component: <Text style={styles.sharedText}>{SECRET_SHARED_CODE}</Text></Text>
+      <Button onPress={refetchData} title="Trigger shared alert" />
     </View>
   );
 };
 
 export const styles = StyleSheet.create({
-
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    marginTop: 25
+    marginTop: 25,
+    padding: 10
   },
   developmentModeText: {
     marginBottom: 20,
@@ -62,7 +44,16 @@ export const styles = StyleSheet.create({
     fontSize: 17,
     color: "rgba(96,100,109, 1)",
     lineHeight: 24,
-    textAlign: "center"
+    textAlign: "center",
+    marginTop: 10
+  },
+  getStartedText1: {
+    textAlign: "center",
+    marginTop: 10,
+    marginBottom: 10
+  },
+  sharedText: {
+    color: "red"
   }
 });
 

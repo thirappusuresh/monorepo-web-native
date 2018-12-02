@@ -9,7 +9,7 @@ const State = {
     ERROR: 4,
 };
 
-export const SECRET_SHARED_CODE = "Hey!!!";
+export const SECRET_SHARED_CODE = "Hello!!!!!";
 
 export function withState(TargetComponent) {
     return class StateMachineWrapper extends Component {
@@ -57,7 +57,7 @@ export function withData(TargetComponent) {
         }
 
         fetchData = async () => {
-            alert("Hi12345678!!!!");
+            alert("Hey!!!!");
             /* const { apiState, fetcher, mapper } = this.props;
 
             try {

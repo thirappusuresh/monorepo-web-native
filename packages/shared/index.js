@@ -49,7 +49,7 @@ var State = {
   SUCCESS: 3,
   ERROR: 4
 };
-var SECRET_SHARED_CODE = "Hey!!!";
+var SECRET_SHARED_CODE = "Hello!!!!!";
 exports.SECRET_SHARED_CODE = SECRET_SHARED_CODE;
 
 function withState(TargetComponent) {
@@ -168,7 +168,7 @@ function withData(TargetComponent) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                alert("Hi12345678!!!!");
+                alert("Hey!!!!");
                 /* const { apiState, fetcher, mapper } = this.props;
                  try {
                     apiState.pending();

@@ -6,25 +6,27 @@ const App = ({ apiState, data, refetchData }) => {
   return (
     <div className="main-container">
       <div className="container">
-        <h1>Data fetching example: {SECRET_SHARED_CODE}</h1>
-        {apiState.isIdle() && <p>This will never be idle</p>}
-        {apiState.isPending() && (
-          <p>
-            Please wait, <strong>fetching data</strong>!
-          </p>
-        )}
-        {apiState.isSuccess() &&
-          data.map(user => (
-            <p key={user.name}>
-              {user.name} works at {user.company.name}
-            </p>
-          ))}
-        {apiState.isError() && (
-          <p>
-            Argh, encountered an <strong>error</strong>
-          </p>
-        )}
-        {<button onClick={refetchData}>Click to refetch</button>}
+        <h1>Monorepo Demo</h1>
+        <p style={{ marginBottom: "10px" }}>
+          This text is coming from shared component:{" "}
+          <span style={{ color: "red" }}>{SECRET_SHARED_CODE}</span>
+        </p>
+        <button
+          onClick={refetchData}
+          style={{
+            marginBottom: "10px",
+            backgroundColor: "#4CAF50",
+            border: "none",
+            color: "white",
+            padding: "15px 32px",
+            textAlign: "center",
+            textDecoration: "none",
+            display: "inline-block",
+            fontSize: "16px"
+          }}
+        >
+          Trigger shared alert
+        </button>
       </div>
     </div>
   );
