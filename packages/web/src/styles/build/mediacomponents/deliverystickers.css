@@ -1,0 +1,85 @@
+.delivery-sticker--container1 {
+  display: flex;
+  justify-content: start;
+  height: 120px;
+  background-color: #eef2f7; }
+  .delivery-sticker--container1.mobile-only {
+    height: auto; }
+    .delivery-sticker--container1.mobile-only .delivery-sticker-left {
+      height: 95px;
+      border-right: 0;
+      border-bottom: 1px solid #FFFFFF; }
+    .delivery-sticker--container1.mobile-only .delivery-sticker-right {
+      height: 95px;
+      border-left: 0;
+      border-top: 1px solid #FFFFFF; }
+
+.delivery-sticker-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid white; }
+
+.delivery-sticker-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid white; }
+
+.delivery-sticker-express {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ff7300;
+  text-align: center; }
+
+.delivery-sticker-text {
+  width: 108px;
+  height: 56px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #44a6b6; }
+
+.express-container {
+  margin-left: 5%; }
+
+.delivery-sticker-express-bottom {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #44a6b6; }
+
+.delivery-sticker-standard {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ff7300;
+  text-align: center; }
+
+.delivery-sticker-standard-bottom {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #44a6b6;
+  text-align: center; }

@@ -16,6 +16,11 @@ app.prepare()
             app.render(req, res, actualPage);
         });
 
+        server.get('/order', (req, res) => {
+            const actualPage = '/MedicalStore';
+            app.render(req, res, actualPage);
+        });
+
         server.get('*', (req, res) => handle(req, res));
 
         server.listen(PORT, (err) => {

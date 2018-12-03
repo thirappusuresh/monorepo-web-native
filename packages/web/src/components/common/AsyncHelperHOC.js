@@ -1,11 +1,12 @@
 import React from 'react';
+import { isEmpty } from 'underscore';
 
 export default function AsyncHelperHOC(Component) {
     // TODO: change the name to something specific
     return class WrappedComponent extends React.Component {
         state = {
             errors: null,
-            isLoading: true,
+            isLoading: false,
         }
 
         setError = (errors) => {
@@ -22,6 +23,11 @@ export default function AsyncHelperHOC(Component) {
             }));
         }
 
+        hasErrors = () => {
+            const { errors } = this.state;
+            return !isEmpty(errors);
+        }
+
         render() {
             return (
                 <Component
@@ -29,6 +35,7 @@ export default function AsyncHelperHOC(Component) {
                     {...this.state}
                     setError={this.setError}
                     setIsLoading={this.setIsLoading}
+                    hasErrors={this.hasErrors}
                 />
             );
         }

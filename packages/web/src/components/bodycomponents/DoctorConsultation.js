@@ -1,14 +1,14 @@
 /* eslint react/prefer-stateless-function: 0 */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faUserMd,
 } from '@fortawesome/free-solid-svg-icons';
 import Button from '../common/Button';
-import { navigate } from '../../utils/NavUtils';
 
 const HealthProductsData = () => (
-    <ul className="col-md-12 container-720 row doc-consultation--data-container web-only">
+    <ul className="col-md-12 container-720 row doc-consultation--data-container web-only no-style">
         <li className="col-md-4">
             <h6>5 Lakh+</h6>
             <p>Patients Consulted</p>
@@ -24,15 +24,7 @@ const HealthProductsData = () => (
     </ul>
 );
 
-const handleBookBySpeciality = () => {
-    navigate('https://m.medlife.com/#/root/educativeConsultationBanner?paidEConsultation=true');
-};
-
-const handleBookBySymptoms = () => {
-    navigate('https://m.medlife.com/#/root/educativeConsultationBanner?paidEConsultation=true');
-};
-
-const ImageLegend = () => (
+const ImageLegend = ({ doctorConsultationLink }) => (
     <React.Fragment>
         <div className="doc-consultation--image-legend-wrpr d-flex justify-content-center">
             <div className="doc-consultation--legend-icon">
@@ -44,13 +36,13 @@ const ImageLegend = () => (
                 <div className="web-only">
                     <Button
                         className="button-transparent doc-consultation--legend-button"
-                        text="Book By Speciality"
-                        onClick={handleBookBySpeciality}
+                        text="Book By Specialty"
+                        data-href={doctorConsultationLink}
                     />
                     <Button
                         className="button-transparent doc-consultation--legend-button"
                         text="Book By Symptoms"
-                        onClick={handleBookBySymptoms}
+                        data-href={doctorConsultationLink}
                     />
                 </div>
             </div>
@@ -58,28 +50,49 @@ const ImageLegend = () => (
         <div className="mobile-only">
             <Button
                 className="button-transparent doc-consultation--legend-button"
-                text="Book By Speciality"
-                onClick={handleBookBySpeciality}
+                text="Book By Specialty"
+                data-href={doctorConsultationLink}
             />
             <Button
                 className="button-transparent doc-consultation--legend-button"
                 text="Book By Symptoms"
-                onClick={handleBookBySymptoms}
+                data-href={doctorConsultationLink}
             />
         </div>
     </React.Fragment>
 );
 
-export default class ShopHealthProducts extends Component {
+ImageLegend.propTypes = {
+    doctorConsultationLink: PropTypes.string.isRequired,
+};
+
+export default class DoctorConsultation extends Component {
+    state = {
+        currentAppURI: '',
+    }
+
+    componentDidMount() {
+        this.setState(prevState => ({
+            ...prevState,
+            currentAppURI: window.location.href,
+        }));
+    }
+
     render() {
+        const { currentAppURI } = this.state;
+        const doctorConsultationLink = 'https://m.medlife.com/#/root/educativeConsultationBanner?paidEConsultation=true';
+        const doctorConsultationLinkWithReferrerPath = `${doctorConsultationLink}&referrerPath=${currentAppURI}`;
+
         return (
             <div className="doc-consultation--container">
                 <div className="container">
                     <div className="row d-flex justify-content-center">
-                        <h2 className="col-md-12 d-flex justify-content-center doc-consultation--heading">Doctor Consultation</h2>
+                        <h2 className="col-md-12 d-flex justify-content-center doc-consultation--heading">
+                            Doctor Consultation
+                        </h2>
                         <HealthProductsData />
                     </div>
-                    <ImageLegend />
+                    <ImageLegend doctorConsultationLink={doctorConsultationLinkWithReferrerPath} />
                 </div>
             </div>
         );

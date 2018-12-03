@@ -4,20 +4,15 @@ import Sellingpointsstrip from './bodycomponents/Sellingpointsstrip';
 import CategoriesMobile from './bodycomponents/CategoriesMobile';
 import OrderMedicinesContainer from './bodycomponents/OrderMedicinesContainer';
 import MedlifeRecipe from './bodycomponents/MedlifeRecipe';
-import Orderhistory from './bodycomponents/Orderhistory';
 import CallToOrder from './bodycomponents/CallToOrder';
-import Recentlyviewed from './bodycomponents/Recentlyviewed';
-import ShopHealthProducts from './bodycomponents/ShopHealthProducts';
-import MedlifeEssentials from './bodycomponents/MedlifeEssentials';
-import Topbrands from './bodycomponents/Topbrands';
-import BookALabTest from './bodycomponents/BookALabTest';
+import SubscribeButtonMobile from './bodycomponents/SubscribeButtonMobile';
 import DoctorConsultation from './bodycomponents/DoctorConsultation';
-import Testimonials from './bodycomponents/Testimonials';
 import PartnerWithUs from './bodycomponents/PartnerWithUs';
 import HealthArticles from './bodycomponents/HealthArticles';
 import MedicalCertificates from './bodycomponents/MedicalCertificates';
 import CitiesWeServe from './bodycomponents/CitiesWeServe';
 import MobileFooter from './bodycomponents/MobileFooter';
+import { renderAsyncComponent } from './common/AsyncComponent';
 
 export default function BodyWrapper() {
     return (
@@ -27,15 +22,54 @@ export default function BodyWrapper() {
             <CategoriesMobile />
             <OrderMedicinesContainer />
             <MedlifeRecipe />
-            {false && <Orderhistory />}
+
+            {false && (
+                renderAsyncComponent({
+                    fetchComponent: () => import('./bodycomponents/Orderhistory'),
+                })
+            )}
+
+            <SubscribeButtonMobile />
             <CallToOrder />
-            {false && <Recentlyviewed />}
-            {false && <ShopHealthProducts />}
-            {false && <MedlifeEssentials />}
-            {false && <Topbrands />}
-            {false && <BookALabTest />}
+
+            {false && (
+                renderAsyncComponent({
+                    fetchComponent: () => import('./bodycomponents/Recentlyviewed'),
+                })
+            )}
+
+            {false && (
+                renderAsyncComponent({
+                    fetchComponent: () => import('./bodycomponents/ShopHealthProducts'),
+                })
+            )}
+
+            {false && (
+                renderAsyncComponent({
+                    fetchComponent: () => import('./bodycomponents/MedlifeEssentials'),
+                })
+            )}
+
+            {false && (
+                renderAsyncComponent({
+                    fetchComponent: () => import('./bodycomponents/Topbrands'),
+                })
+            )}
+
+            {false && (
+                renderAsyncComponent({
+                    fetchComponent: () => import('./bodycomponents/BookALabTest'),
+                })
+            )}
+
             <DoctorConsultation />
-            <Testimonials />
+
+            {false && (
+                renderAsyncComponent({
+                    fetchComponent: () => import('./bodycomponents/Testimonials'),
+                })
+            )}
+
             <PartnerWithUs />
             <HealthArticles />
             <MedicalCertificates />

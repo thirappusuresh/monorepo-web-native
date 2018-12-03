@@ -48,7 +48,7 @@
 .footer--links{
     padding-bottom: 44px;
     margin-bottom: 56px;
-    border-bottom: 1px solid #ccc;
+    // border-bottom: 1px solid #ccc;
 }
 .footer--links-heading{
     line-height: 19px;
@@ -64,6 +64,18 @@
         text-decoration: none;
         color: inherit;
         font-size: inherit;
+    }
+
+    button{
+        border:none;
+        background: transparent;
+        outline: none;
+        color: #cccccc;
+        padding-left: 0;
+        &:hover{
+            cursor:pointer;
+        }
+
     }
 }
 

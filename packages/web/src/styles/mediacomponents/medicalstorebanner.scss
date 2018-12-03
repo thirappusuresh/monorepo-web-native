@@ -1,0 +1,88 @@
+.medical-store-banner-right{
+    width: 310px;
+  height: 184px;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px 1px rgba(5, 91, 122, 0.5);
+  background-color: #ffffff;
+  margin-left: 25%;   
+}
+
+.upload-prescription-full-width{
+    border-radius: 2px;
+  box-shadow: 0 2px 8px 1px rgba(5, 91, 122, 0.5);
+  background-color: #ffffff;
+}
+
+.medical-store-banner-right div{
+    text-align: center;
+}
+
+
+.medical-store-banner-left--label{
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.medical-store-banner-left--steps-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.medical-store-banner-left--desc{
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: 10%;
+}
+
+.medical-store-banner-left--steps{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-top: 4%;
+    margin-left: 0;
+
+}
+
+.medical-store-banner-left--steps--left{
+    width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #44a6b6;
+  padding-top: 2%;
+
+}
+
+.medical-store-banner-left--steps--right{
+    width: 94px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;    
+
+}

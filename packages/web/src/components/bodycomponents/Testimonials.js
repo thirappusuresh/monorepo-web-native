@@ -62,7 +62,9 @@ class Testimonials extends Component {
             <div className="testimonials--container">
                 <div className="container">
                     <div className="row d-flex justify-content-center">
-                        <h2 className="col-md-12 d-flex justify-content-center testimonials--heading">Why Customers Love Medlife</h2>
+                        <h3 className="col-md-12 d-flex justify-content-center testimonials--heading">
+                            Why Customers Love Medlife
+                        </h3>
                         <div className="col-md-12 row testimonials--cards">
                             {isLoading &&
                                 'Loading testimonials...'

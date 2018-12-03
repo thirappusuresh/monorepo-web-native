@@ -26,7 +26,9 @@ const MedicalCertificates = () => {
             <div className="container">
                 <div className="row d-flex justify-content-center">
                     <div className="col-md-12">
-                        <h6 className="medical-certificates--heading">Medlife Certificates</h6>
+                        <h3 className="medical-certificates--heading">
+                            Medlife Certificates
+                        </h3>
                         <div className="medical-certificates--images-wrapper d-flex justify-content-center">
                             {
                                 certificateImagePaths.map(imgPath => <MedicalCertificateItem key={imgPath} imgPath={imgPath} />)

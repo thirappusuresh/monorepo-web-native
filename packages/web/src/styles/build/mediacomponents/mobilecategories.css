@@ -4,6 +4,11 @@
   margin: 0 10px; }
   .mobile-categories--list img {
     margin-bottom: 15px; }
+  .mobile-categories--list button {
+    background-color: white;
+    box-shadow: none;
+    border: none;
+    color: #666; }
 
 .mobile-categories--container {
   padding: 26px 20px; }

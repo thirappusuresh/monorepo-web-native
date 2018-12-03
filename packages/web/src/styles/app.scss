@@ -18,7 +18,7 @@ p{
 .img {
     height: 200px;
 }
-ul{
+.no-style{
     list-style: none;
     padding:0;
     margin: 0;
@@ -90,6 +90,10 @@ ul{
     position: relative;
 }
 
+.navbar--call-to-order {
+    font-size: 12px;
+}
+
 .input-group> .form-control:focus{
     box-shadow: none;
     border: 1px solid #ccc;
@@ -103,7 +107,7 @@ ul{
 .width-100{
     width: 100%;
 }
-.mobile-only{
+.mobile-only, .mobile-only-inline-block {
     display: none !important;
 }
 .main-container{
@@ -113,10 +117,75 @@ ul{
     .mobile-only{
         display: block !important;
     }
+    .mobile-only-inline-block {
+        display: inline-block !important;
+    }
     .web-only{
         display: none !important;
     }
 }
+
+// adding utility for unstyling links: https://stackoverflow.com/a/33596636/1939344
+.a-unstyled, .a-unstyled:link, .a-unstyled:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.loading-bar-80 {
+    background-color: #d8d8d8;
+    height: 20px;
+    width: 80%;
+}
+
+.loading-bar-60 {
+    background-color: #d8d8d8;
+    height: 20px;
+    width: 80%;
+}
+
+.tnc-modal {
+    p {
+        font-weight: 400;
+        margin: 0 0 20px;
+    }
+}
+
+.visible-small-screen {
+    display: none;
+}
+.hidden-small-screen {
+    display: block;
+}
+.navbar-title {
+    display: none !important;
+
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+@media (max-width: 576px) {
+    .visible-small-screen, .navbar-title {
+        display: block !important;
+    }
+
+    .hidden-small-screen {
+        display: none;
+    }
+}
+
+.subscribe-now-wrapper--text-content {
+    font-size: 14px;
+    width: 170px;
+    word-break: break-all
+}
+
+.subscribe-now-btn {
+    color: #ff7300;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
 @import "./mediacomponents/buttons.scss";
 @import "./mediacomponents/dialog.scss";
 @import "./mediacomponents/header.scss";
@@ -139,3 +208,8 @@ ul{
 @import "./mediacomponents/medicalcertificates.scss";
 @import "./mediacomponents/citiesweserve.scss";
 @import "./mediacomponents/footer.scss";
+@import "./mediacomponents/uploadprescription.scss";
+@import "./mediacomponents/deliverystickers.scss";
+@import "./mediacomponents/medicalstorebanner.scss";
+
+@import "./mediacomponents/menuitems.scss";

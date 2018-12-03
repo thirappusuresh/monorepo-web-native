@@ -10,7 +10,7 @@ import { getMonthName, getParsedGMTString } from '../../utils/DateUtils';
 
 // eslint-disable-next-line react/prop-types
 const HealthArticleItem = ({ blog }) => {
-    const { _embedded = {} } = blog;
+    const { _embedded = {}, link } = blog;
     const featuredmedia = _embedded['wp:featuredmedia'] || [];
     const imgSource = featuredmedia.length ? featuredmedia[0].source_url : null;
     const parsedDate = getParsedGMTString(blog.date_gmt);
@@ -19,7 +19,14 @@ const HealthArticleItem = ({ blog }) => {
     const date = `${parsedDate.getDate()}th ${month} ${parsedDate.getFullYear()}`;
 
     return (
-        <div className="health-articles--items col-md-3">
+        <div
+            role="link"
+            tabIndex={0}
+            data-href={link}
+            // onClick={handleNavigation}
+            // onKeyDown={handleNavigation}
+            className="health-articles--items col-md-3"
+        >
             {imgSource && <img className="health-articles--items-image" alt="Recent" src={imgSource} />}
             {!imgSource && <div style={{ height: '210px', backgroundColor: '#d8d8d8' }} />}
 
@@ -32,6 +39,17 @@ const HealthArticleItem = ({ blog }) => {
         </div>
     );
 };
+
+const HealthArticleItemLoading = () => (
+    <div
+        className="health-articles--items col-md-3"
+    >
+        <div style={{ height: '210px', backgroundColor: '#d8d8d8' }} />
+
+        <p className="health-articles--items-desc loading-bar-80" />
+        <div className="health-articles--items-heading loading-bar-60" />
+    </div>
+);
 
 class HealthArticles extends Component {
     state = {
@@ -63,10 +81,17 @@ class HealthArticles extends Component {
             <div className="health-articles--container web-only">
                 <div className="container">
                     <div className="row d-flex justify-content-center">
-                        <h2 className="col-md-12 d-flex justify-content-center health-articles--heading">Health Articles</h2>
+                        <h2 className="col-md-12 d-flex justify-content-center health-articles--heading">
+                            Health Articles
+                        </h2>
                         <div className="col-md-12 row">
                             {isLoading &&
-                                'Loading health articles...'
+                                <React.Fragment>
+                                    <HealthArticleItemLoading key={1} />
+                                    <HealthArticleItemLoading key={2} />
+                                    <HealthArticleItemLoading key={3} />
+                                    <HealthArticleItemLoading key={4} />
+                                </React.Fragment>
                             }
                             {errors &&
                                 'Some error occured. Please refresh'
@@ -89,11 +114,16 @@ class HealthArticles extends Component {
 }
 
 HealthArticles.propTypes = {
-    isLoading: PropTypes.bool.isRequired,
+    isLoading: PropTypes.bool,
     // eslint-disable-next-line react/forbid-prop-types
-    errors: PropTypes.object.isRequired,
+    errors: PropTypes.object,
     setIsLoading: PropTypes.func.isRequired,
     setError: PropTypes.func.isRequired,
+};
+
+HealthArticles.defaultProps = {
+    isLoading: true,
+    errors: null,
 };
 
 export default AsyncHelperHOC(HealthArticles);

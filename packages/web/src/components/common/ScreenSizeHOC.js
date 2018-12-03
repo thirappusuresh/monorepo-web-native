@@ -2,7 +2,7 @@ import React from 'react';
 import { debounce } from 'underscore';
 
 
-export default function ScreenSizeHOC(Component) {
+export default function ScreenSizeHOC(TargetComponent) {
     return class WrappedScreenSizeComponent extends React.Component {
         constructor(props) {
             super(props);
@@ -41,8 +41,9 @@ export default function ScreenSizeHOC(Component) {
 
         render() {
             return (
-                <Component
+                <TargetComponent
                     {...this.state}
+                    {...this.props}
                 />
             );
         }

@@ -6328,7 +6328,7 @@ p {
 .img {
   height: 200px; }
 
-ul {
+.no-style {
   list-style: none;
   padding: 0;
   margin: 0; }
@@ -6393,6 +6393,9 @@ ul {
   color: #666;
   position: relative; }
 
+.navbar--call-to-order {
+  font-size: 12px; }
+
 .input-group > .form-control:focus {
   box-shadow: none;
   border: 1px solid #ccc; }
@@ -6406,7 +6409,7 @@ ul {
 .width-100 {
   width: 100%; }
 
-.mobile-only {
+.mobile-only, .mobile-only-inline-block {
   display: none !important; }
 
 .main-container {
@@ -6415,8 +6418,55 @@ ul {
 @media (max-width: 991.98px) {
   .mobile-only {
     display: block !important; }
+  .mobile-only-inline-block {
+    display: inline-block !important; }
   .web-only {
     display: none !important; } }
+
+.a-unstyled, .a-unstyled:link, .a-unstyled:hover {
+  color: inherit;
+  text-decoration: inherit; }
+
+.loading-bar-80 {
+  background-color: #d8d8d8;
+  height: 20px;
+  width: 80%; }
+
+.loading-bar-60 {
+  background-color: #d8d8d8;
+  height: 20px;
+  width: 80%; }
+
+.tnc-modal p {
+  font-weight: 400;
+  margin: 0 0 20px; }
+
+.visible-small-screen {
+  display: none; }
+
+.hidden-small-screen {
+  display: block; }
+
+.navbar-title {
+  display: none !important;
+  font-size: 20px;
+  line-height: 1; }
+
+@media (max-width: 576px) {
+  .visible-small-screen, .navbar-title {
+    display: block !important; }
+  .hidden-small-screen {
+    display: none; } }
+
+.subscribe-now-wrapper--text-content {
+  font-size: 14px;
+  width: 170px;
+  word-break: break-all; }
+
+.subscribe-now-btn {
+  color: #ff7300;
+  text-transform: uppercase;
+  font-size: 14px; }
 
 .button-transparent, .button-primary {
   text-transform: uppercase;
@@ -6542,7 +6592,12 @@ svg[data-icon="map-marker-alt"] {
   top: 30px; }
 
 .navbar--dialog--sublink {
-  width: 110px; }
+  width: 110px;
+  color: #000;
+  font-size: 12.5px; }
+  .navbar--dialog--sublink:hover {
+    color: inherit;
+    text-decoration: none; }
 
 @media (max-width: 991.98px) {
   .navbar-expand-sm .navbar-collapse {
@@ -6582,26 +6637,19 @@ svg[data-icon="map-marker-alt"] {
     background: #fff;
     height: 100vh;
     z-index: 1;
-    padding: 20px 10px;
+    padding: 0px;
     opacity: 0;
     pointer-events: none;
-    transition: all 200ms ease-in-out; }
+    transition: all 200ms ease-in-out;
+    overflow-y: scroll; }
     .collapsable-menu--container.active {
       left: 0;
       pointer-events: inherit;
       opacity: 1;
-      box-shadow: 7px 0px 15px -7px black; }
-  .cross-icon {
-    font-size: 20px;
-    cursor: pointer; }
-  .navbar--user-profile {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    margin-top: 10px; } }
+      box-shadow: 7px 0px 15px -7px black; } }
 
 .carousel--full-stretch-container {
-  height: 236px;
+  height: 234px;
   background-color: #44a6b6;
   overflow: hidden;
   display: flex;
@@ -6778,6 +6826,11 @@ svg[data-icon="map-marker-alt"] {
   margin: 0 10px; }
   .mobile-categories--list img {
     margin-bottom: 15px; }
+  .mobile-categories--list button {
+    background-color: white;
+    box-shadow: none;
+    border: none;
+    color: #666; }
 
 .mobile-categories--container {
   padding: 26px 20px; }
@@ -7679,8 +7732,7 @@ svg[data-icon="map-marker-alt"] {
 
 @media (max-width: 991.98px) {
   .medical-certificates--container {
-    padding: 0 8px;
-    margin: 0; }
+    padding: 0 8px; }
   .medical-certificates--heading {
     line-height: 25px;
     margin-bottom: 25px;
@@ -7705,7 +7757,8 @@ svg[data-icon="map-marker-alt"] {
   text-align: center; }
 
 .cities-we-serve--city-wrapper {
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 0 20px; }
 
 .cities-we-serve--city {
   width: 20%;
@@ -7716,7 +7769,6 @@ svg[data-icon="map-marker-alt"] {
   font-weight: 600;
   color: #134f70;
   margin-top: 20px;
-  cursor: pointer;
   letter-spacing: 0.7px; }
 
 .cities-we-serve--check-heading {
@@ -7820,8 +7872,7 @@ svg[data-icon="map-marker-alt"] {
 
 .footer--links {
   padding-bottom: 44px;
-  margin-bottom: 56px;
-  border-bottom: 1px solid #ccc; }
+  margin-bottom: 56px; }
 
 .footer--links-heading {
   line-height: 19px;
@@ -7836,6 +7887,14 @@ svg[data-icon="map-marker-alt"] {
     text-decoration: none;
     color: inherit;
     font-size: inherit; }
+  .footer-links-wrapper button {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #cccccc;
+    padding-left: 0; }
+    .footer-links-wrapper button:hover {
+      cursor: pointer; }
 
 .footer--links-partner-heading {
   margin-top: 48px; }
@@ -7860,3 +7919,266 @@ svg[data-icon="map-marker-alt"] {
     .selling-point--left p {
       width: auto;
       margin: 0; } }
+
+.upload-medicines--prescription div {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #666666; }
+
+.delivery-sticker--container1 {
+  display: flex;
+  justify-content: start;
+  height: 120px;
+  background-color: #eef2f7; }
+  .delivery-sticker--container1.mobile-only {
+    height: auto; }
+    .delivery-sticker--container1.mobile-only .delivery-sticker-left {
+      height: 95px;
+      border-right: 0;
+      border-bottom: 1px solid #FFFFFF; }
+    .delivery-sticker--container1.mobile-only .delivery-sticker-right {
+      height: 95px;
+      border-left: 0;
+      border-top: 1px solid #FFFFFF; }
+
+.delivery-sticker-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid white; }
+
+.delivery-sticker-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid white; }
+
+.delivery-sticker-express {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ff7300;
+  text-align: center; }
+
+.delivery-sticker-text {
+  width: 108px;
+  height: 56px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #44a6b6; }
+
+.express-container {
+  margin-left: 5%; }
+
+.delivery-sticker-express-bottom {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #44a6b6; }
+
+.delivery-sticker-standard {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ff7300;
+  text-align: center; }
+
+.delivery-sticker-standard-bottom {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #44a6b6;
+  text-align: center; }
+
+.medical-store-banner-right {
+  width: 310px;
+  height: 184px;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px 1px rgba(5, 91, 122, 0.5);
+  background-color: #ffffff;
+  margin-left: 25%; }
+
+.upload-prescription-full-width {
+  border-radius: 2px;
+  box-shadow: 0 2px 8px 1px rgba(5, 91, 122, 0.5);
+  background-color: #ffffff; }
+
+.medical-store-banner-right div {
+  text-align: center; }
+
+.medical-store-banner-left--label {
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff; }
+
+.medical-store-banner-left--steps-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.medical-store-banner-left--desc {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: 10%; }
+
+.medical-store-banner-left--steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 4%;
+  margin-left: 0; }
+
+.medical-store-banner-left--steps--left {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #44a6b6;
+  padding-top: 2%; }
+
+.medical-store-banner-left--steps--right {
+  width: 94px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff; }
+
+.menubar-mobile {
+  width: 100%;
+  max-width: 820px;
+  font-size: 12.5px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.12;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 16px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none; }
+  .menubar-mobile .navheaderlink {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #666666;
+    height: 15px;
+    margin-bottom: 8px;
+    margin-top: 24px; }
+  .menubar-mobile .subheaderlink {
+    font-size: 16px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #0b2c3e;
+    display: 'list-item'; }
+    .menubar-mobile .subheaderlink .linkcontainer {
+      align-self: flex-start;
+      border: 0px;
+      background-color: white;
+      /* margin-left: 0px; */
+      padding-left: 0px;
+      width: 100%;
+      display: flex;
+      height: 100%; }
+      .menubar-mobile .subheaderlink .linkcontainer:focus {
+        outline: 0 !important;
+        box-shadow: none !important; }
+    .menubar-mobile .subheaderlink .menubar-icon {
+      margin-right: 24px;
+      font-size: 24px;
+      vertical-align: middle !important;
+      width: 24px;
+      height: 24px; }
+    .menubar-mobile .subheaderlink span {
+      color: #0b2c3e;
+      margin-top: 5px; }
+
+.user--profile--container {
+  width: 100%;
+  background-color: #eef2f7;
+  position: relative;
+  height: 98px; }
+
+.navbar--user-profile {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 41px 0px 0px 16px;
+  color: #333333; }
+
+.navbar--user-mobile {
+  font-size: 13px;
+  font-weight: normal;
+  color: #666666;
+  padding: 0px 0px 15px 16px; }
+
+.mobile-menu-close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer; }
+
+.mobile-menu-edit {
+  position: absolute;
+  top: 50px;
+  right: 17px;
+  font-size: 20px;
+  cursor: pointer; }

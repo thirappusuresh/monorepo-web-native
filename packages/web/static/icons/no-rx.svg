@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#134F70" stroke-linecap="round" stroke-width=".7" d="M6 10.5h5"/>
+        <text fill="#134F70" font-family="Roboto-Bold, Roboto" font-size="6" font-weight="bold">
+            <tspan x="5.5" y="8.5">Rx</tspan>
+        </text>
+        <path stroke="#134F70" d="M19.5 13.87V3a.5.5 0 0 0-.5-.5H5a.5.5 0 0 0-.5.5v11.479l1.882.475 2.504-2.003 4.906 1.342 2.078-2.98 1.907 1.271.022.015L19.5 13.87zM19.5 16.75l-3.32-2.49-1.426 2.849-5.181-1.691-2.463 1.607-2.61-.435V21a.5.5 0 0 0 .5.5h14a.5.5 0 0 0 .5-.5v-4.25z"/>
+    </g>
+</svg>

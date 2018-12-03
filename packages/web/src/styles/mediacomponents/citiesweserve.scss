@@ -13,6 +13,7 @@
 }
 .cities-we-serve--city-wrapper{
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 .cities-we-serve--city{
     width: 20%;
@@ -23,7 +24,6 @@
     font-weight: 600;
     color: #134f70;
     margin-top: 20px;
-    cursor: pointer;
     letter-spacing: 0.7px;
 }
 .cities-we-serve--check-heading{

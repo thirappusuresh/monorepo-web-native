@@ -120,3 +120,34 @@ TODO: add examples of usage in this section.
 When you build for production, `nextjs` with `webpack` handles route-based code splitting & minification + uglification + tree-shaking of your bundles.
 
 As for CSS, we use `css-purify-webpack-loader` to remove unused CSS from bundles.
+
+#### Using env & client side variables in React Components
+
+Because this is a SSR app, all code we write gets executed in server side. While this is not a problem on its own, however some globals like `window` || `document` are only available in client side.
+
+The `componentDidMount` lifecycle hook runs only in client side. Maybe this is a good chance to setup window level event listeners if required.
+
+##### env variables
+
+All variables declared in `.env` file is available in code namespaced with `medlifeConst`.
+
+For example:
+this is the content of `.env` file
+
+```
+PORT=3000
+```
+
+Then the same can be used in React components as `medlifeConst.PORT`
+At build time, this is replaced with the actual value so as to avoid polluting the scope.
+
+
+```
+componentDidMount() {
+    console.log('Home.componentDidMount runs only in client');
+    console.log('medlifeConst.ANALYZE', medlifeConst.ANALYZE);
+
+    const { features, setFeatures } = this.props;
+    setFeatures({ features });
+}
+```

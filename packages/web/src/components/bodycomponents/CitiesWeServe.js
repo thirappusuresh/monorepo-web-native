@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { getAllCities, isPincodeIsDeliverable } from '../../services/HomePageServices';
 import AsyncHelperHOC from '../common/AsyncHelperHOC';
-import Button from '../common/Button';
+import PinCodeCheckForm from './PinCodeCheckForm';
 
 class CitiesWeServe extends Component {
     state = {
@@ -93,31 +93,12 @@ class CitiesWeServe extends Component {
 
         return (
             <div className="d-flex justify-content-center row align-items-center">
-                <ul className="cities-we-serve--city-wrapper mr-auto d-flex justify-content-between col-md-9">
+                <ul className="no-style cities-we-serve--city-wrapper mr-auto d-flex justify-content-between col-md-9">
                     {this.renderCities()}
                     <li className="cities-we-serve--more-cities">+&nbsp; 100 CITIES</li>
                 </ul>
                 <div className="col-md-3 d-flex justify-content-end cities-we-serve--right">
-                    <div>
-                        <h4 className="cities-we-serve--check-heading">Check if we serve in your city</h4>
-                        <div className="d-flex">
-                            <input
-                                className="cities-we-serve--search"
-                                type="text"
-                                placeholder="Enter Pincode"
-                                maxLength="6"
-                                name="pincodeFormField"
-                                value={this.state.pincodeFormField}
-                                onChange={this.updateField}
-                            />
-                            <Button
-                                className="button-primary cities-we-serve--search-button"
-                                text="CHECK"
-                                disabled={!this.state.pincodeFormField.length}
-                                onClick={this.handlePincodeCheck}
-                            />
-                        </div>
-                    </div>
+                    <PinCodeCheckForm />
                 </div>
             </div>
         );
@@ -129,7 +110,9 @@ class CitiesWeServe extends Component {
                 <div className="container">
                     <div className="row d-flex justify-content-center">
                         <div className="col-md-12 cities-we-serve--content-wrapper">
-                            <h6 className="cities-we-serve--heading">Cities We Serve</h6>
+                            <h2 className="cities-we-serve--heading">
+                                Cities We Serve
+                            </h2>
                             {this.renderContent()}
                         </div>
                     </div>

@@ -40,16 +40,20 @@ export default class MedlifeRecipe extends Component {
             <div className="medlife-recipe--container web-only">
                 <div className="container">
                     <div className="row">
-                        <h6 className="col-md-12 d-flex justify-content-center medlife-recipe--heading">
+                        <h3 className="col-md-12 d-flex justify-content-center medlife-recipe--heading">
                             How it Works?
                             <FontAwesomeIcon icon={faChevronDown} className="medlife-recipe--arrow-down" />
-                        </h6>
+                        </h3>
                         <div className="col-md-12">
                             <div className="row">
                                 <div className="col-md-6">
-                                    <h4 className="medlife-recipe--sub-heading-left">How to order medicines on Medlife? It’s Simple.</h4>
+                                    <h2 className="medlife-recipe--sub-heading-left">
+                                        How to order medicines on Medlife? It’s Simple.
+                                    </h2>
                                     { this.renderOrderingSteps() }
-                                    <h4 className="medlife-recipe--sub-heading-left">Don’t have prescription? Don’t worry!</h4>
+                                    <h3 className="medlife-recipe--sub-heading-left">
+                                        Don’t have prescription? Don’t worry!
+                                    </h3>
                                     <p>Simply search & add the medicines OR get consultation from Medlife doctor</p>
                                 </div>
                                 <div className="col-md-6 d-flex justify-content-end">
@@ -60,7 +64,7 @@ export default class MedlifeRecipe extends Component {
                                         frameBorder={0}
                                         title="medlife-video"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullscreen=""
+                                        allowFullScreen=""
                                     />
                                 </div>
                             </div>

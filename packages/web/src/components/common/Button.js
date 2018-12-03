@@ -12,6 +12,7 @@ const Button = (props) => {
         isLoading,
         loadingText,
         disabled,
+        ...rest
     } = props;
 
     if (render && isFunction(render)) {
@@ -32,6 +33,7 @@ const Button = (props) => {
             className={className}
             onClick={onClick}
             disabled={disabled || isLoading}
+            {...rest}
         >
             {isLoading ? loadingText || text : text}
         </button>

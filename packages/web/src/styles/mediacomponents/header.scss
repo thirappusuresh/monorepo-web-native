@@ -86,6 +86,13 @@ svg[data-icon="map-marker-alt"]{
 
 .navbar--dialog--sublink {
     width: 110px;
+    color: #000;
+    font-size: 12.5px;
+
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -134,10 +141,11 @@ svg[data-icon="map-marker-alt"]{
         background: #fff;
         height: 100vh;
         z-index: 1;
-        padding: 20px 10px;
+        padding: 0px;
         opacity: 0;
         pointer-events: none;
         transition: all 200ms ease-in-out;
+        overflow-y:scroll;
         &.active{
             left: 0;
             pointer-events: inherit;
@@ -145,14 +153,6 @@ svg[data-icon="map-marker-alt"]{
             box-shadow: 7px 0px 15px -7px rgba(0,0,0,1);
         }
     }
-    .cross-icon{
-        font-size: 20px;
-        cursor: pointer;
-    }
-    .navbar--user-profile{
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 14px;
-        margin-top: 10px;
-    }
+   
+   
 }
