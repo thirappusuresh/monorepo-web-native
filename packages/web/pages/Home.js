@@ -20,8 +20,8 @@ class Home extends Component {
         return (
             <Fragment>
                 <Header />
-                <App />
                 <NavbarContainer />
+                <App />
                 <BodyWrapperContainer />
                 <Footer />
             </Fragment>
